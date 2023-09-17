@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+</head>
+<body>
+
+    <button onclick="sendEmail()">Test</button>
+    <script>
+
+        function sendEmail(){
+            Email.send({
+                SecureToken : "b82fb418-4224-4aee-8352-01f9b270fbf4",
+                To : 'muzaireng@gmail.com',
+                From : "Muhammad Uzair",
+                Subject : "This is the subject",
+                Body : "And this is the body"
+            }).then(
+              message => alert(message)
+            );}
+        //1BA7C67AB66F3B2EDF5936E1FC18E8CBC3CA
+//token
+        //b82fb418-4224-4aee-8352-01f9b270fbf4
+        //hex (#B29356)
+    </script>
+</body>
+</html>

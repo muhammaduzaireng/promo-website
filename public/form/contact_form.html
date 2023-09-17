@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact Form</title>
+</head>
+<body>
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="submit.php" method="post">
+            <div class="input-container">
+                <input type="text" name="firstname" placeholder="First Name" required>
+                <input type="text" name="lastname" placeholder="Last Name" required>
+            </div>
+            <div class="input-container">
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" placeholder="Message" rows="6" required></textarea>
+            <div class="input-container">
+                <input type="text" name="captcha" placeholder="CAPTCHA" required>
+                <!-- Replace with your actual CAPTCHA implementation -->
+                <img src="captcha.png" alt="CAPTCHA">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
