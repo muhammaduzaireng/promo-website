@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="dataPage3.js"></script>
+    <script src="dataPage4.js"></script>
+    <script src="dataPage5.js"></script>
+    <script src="dataPage6.js"></script>
+    <script src="dataPage7.js"></script>
+    <script src="dataPage8.js"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard">
+            <h1>Dashboard</h1>
+        <label for="availability_desktop">Availability Desktop</label>
+        <input type="text" id="availability_desktop">
+        <br>
+        <label for="header_headline">Header Headline</label>
+        <input type="text" id="header_headline">
+        <br>
+        <label for="header-intro"> Header Intro</label>
+        <input type="text" id="header_intro">
+        <br>
+        <label for="button-label">Button-1</label>
+        <input type="text" id="button_label_1">
+        <br>
+        <label for="button-label">Button-2</label>
+        <input type="text" id="button_label_2">
+        <br>
+        <label for="Background">Dashboard Background Color</label>
+        <input type="text" id="db_background">
+        <br>
+
+        <button onclick="updateData()">Update Data</button>
+    </div>
+
+    <div class="page-1">
+        <h1>Page-1</h1>
+    <label for="page_1_title"> Page 1 Title</label>
+    <input type="text" id="page_1_title">
+    <br>
+    <label for="role_1"> role-1</label>
+    <input type="text" id="role_1">
+    <br>
+    <label for="role_2">  role-2</label>
+    <input type="text" id="role_2">
+    <br>
+    <label for="role_3">role-3</label>
+    <input type="text" id="role_3">
+    <br>
+    <label for="page_1_description">page_1_description</label>
+    <input type="text" id="page_1_description">
+    <br>
+    <label for="background_color">Background-color-page-1</label>
+    <input type="text" id="background_color">
+    <br>
+    
+
+    <button onclick="updateDataPage1()">Update Data</button>
+</div>
+<div class="page-2">
+    <h1>Page-2</h1>
+<label for="page_2_title"> Page 1 Title</label>
+<input type="text" id="page_2_title">
+<br>
+<label for="role_1_page_2"> role-1</label>
+<input type="text" id="page_2_role_1">
+<br>
+<label for="role_2_page_2">  role-2</label>
+<input type="text" id="page_2_role_2">
+<br>
+
+<label for="page_2_description">page_2_description</label>
+<input type="text" id="page_2_description">
+<br>
+<label for="background_color_page_2">Background-color-page-2</label>
+<input type="text" id="background_color_page_2">
+<br>
+
+
+<button onclick="updateDataPage2()">Update Data</button>
+</div>
+<div class="page-3">
+    <h1>Page-3</h1>
+<label for="page_3_title"> Page 3 Title</label>
+<input type="text" id="page_3_title">
+<br>
+<label for="role_1_page_3"> role-1</label>
+<input type="text" id="page_3_role_1">
+<br>
+<label for="role_2_page_3">  role-2</label>
+<input type="text" id="page_3_role_2">
+<br>
+
+<label for="page_2_description">page_3_description</label>
+<input type="text" id="page_3_description">
+<br>
+<label for="background_color_page_3">Background-color-page-3</label>
+<input type="text" id="background_color_page_3">
+<br>
+
+
+<button onclick="updateDataPage3()">Update Data</button>
+</div>
+<div class="page-4">
+    <h1>Page-4</h1>
+<label for="page_4_title"> Page 4 Title</label>
+<input type="text" id="page_4_title">
+<br>
+<label for="role_1_page_4"> role-1</label>
+<input type="text" id="page_4_role_1">
+<br>
+<label for="role_2_page_4">  role-2</label>
+<input type="text" id="page_4_role_2">
+<br>
+<label for="role_3_page_4">  role-3</label>
+<input type="text" id="page_4_role_3">
+<br>
+
+<label for="page_4_description">page_4_description</label>
+<input type="text" id="page_4_description">
+<br>
+<label for="background_color_page_4">Background-color-page-4</label>
+<input type="text" id="background_color_page_4">
+<br>
+
+
+<button onclick="updateDataPage4()">Update Data</button>
+</div>
+<div class="page-5">
+    <h1>Page-5</h1>
+<label for="page_5_title"> Page 5 Title</label>
+<input type="text" id="page_5_title">
+<br>
+<label for="role_1_page_5"> role-1</label>
+<input type="text" id="page_5_role_1">
+<br>
+<label for="role_2_page_5">  role-2</label>
+<input type="text" id="page_5_role_2">
+<br>
+
+<label for="page_5_description">page_5_description</label>
+<input type="text" id="page_5_description">
+<br>
+<label for="background_color_page_5">Background-color-page-5</label>
+<input type="text" id="background_color_page_5">
+<br>
+
+
+<button onclick="updateDataPage5()">Update Data</button>
+</div>
+<div class="page-6">
+    <h1>page-6</h1>
+<label for="page_6_title"> Page 6 Title</label>
+<input type="text" id="page_6_title">
+<br>
+<label for="role_1_page_6"> role-1</label>
+<input type="text" id="page_6_role_1">
+<br>
+<label for="role_2_page_6">  role-2</label>
+<input type="text" id="page_6_role_2">
+<br>
+
+<label for="page_6_description">page_6_description</label>
+<input type="text" id="page_6_description">
+<br>
+<label for="background_color_page_6">Background-color-page-6</label>
+<input type="text" id="background_color_page_6">
+<br>
+
+
+<button onclick="updateDatapage6()">Update Data</button>
+</div>
+
+<div class="page-7">
+    <h1>page-7</h1>
+<label for="page_7_title"> Page 7 Title</label>
+<input type="text" id="page_7_title">
+<br>
+<label for="role_1_page_7"> role-1</label>
+<input type="text" id="page_7_role_1">
+<br>
+<label for="role_2_page_7">  role-2</label>
+<input type="text" id="page_7_role_2">
+<br>
+
+<label for="page_7_description">page_7_description</label>
+<input type="text" id="page_7_description">
+<br>
+<label for="background_color_page_7">Background-color-page-7</label>
+<input type="text" id="background_color_page_7">
+<br>
+
+
+<button onclick="updateDatapage7()">Update Data</button>
+</div>
+
+<div class="page-8">
+    <h1>Page 8</h1>
+
+    <div>
+        <h4>Section 1</h4>
+        <label for="title">Title_1</label>
+        <input type="text" id="title_1">
+        <label for="description">Description 1</label>
+        <input type="text" id="description_1">
+    </div>
+    <div>
+        <h4>Section 2 </h4>
+        <h4>Commenets</h4>
+        <div>
+            <h5>Comment 1</h5>
+            <label for="comments">Comment 1</label>
+            <input type="text" id="cm_comment_1">
+            <label for="title">title</label>
+            <input type="text" id="cm_title_1">
+            <label for="name">Name</label>
+            <input type="text" id="cm_name_1">
+        </div>
+        <div>
+            <h5>Comment 2</h5>
+            <label for="comments">Comment 2</label>
+            <input type="text" id="cm_comment_2">
+            <label for="title">title</label>
+            <input type="text" id="cm_title_2">
+            <label for="name">Name</label>
+            <input type="text" id="cm_name_2">
+        </div>
+        <div>
+            <h5>Comment 3</h5>
+            <label for="comments">Comment 3</label>
+            <input type="text" id="cm_comment_3">
+            <label for="title">title</label>
+            <input type="text" id="cm_title_3">
+            <label for="name">Name</label>
+            <input type="text" id="cm_name_3">
+        </div>
+        <div>
+            <h5>Comment 4</h5>
+            <label for="comments">Comment 4</label>
+            <input type="text" id="cm_comment_4">
+            <label for="title">title</label>
+            <input type="text" id="cm_title_4">
+            <label for="name">Name</label>
+            <input type="text" id="cm_name_4">
+        </div>
+        <div>
+            <h5>Comment 5</h5>
+            <label for="comments">Comment 5</label>
+            <input type="text" id="cm_comment_5">
+            <label for="title">title</label>
+            <input type="text" id="cm_title_5">
+            <label for="name">Name</label>
+            <input type="text" id="cm_name_5">
+        </div>
+        <div>
+            <h5>Comment 6</h5>
+            <label for="comments">Comment 6</label>
+            <input type="text" id="cm_comment_6">
+            <label for="title">title</label>
+            <input type="text" id="cm_title_6">
+            <label for="name">Name</label>
+            <input type="text" id="cm_name_6">
+        </div>
+        <div>
+            <h5>Comment 7</h5>
+            <label for="comments">Comment 7</label>
+            <input type="text" id="cm_comment_7">
+            <label for="title">title</label>
+            <input type="text" id="cm_title_7">
+            <label for="name">Name</label>
+            <input type="text" id="cm_name_7">
+        </div>
+        <div>
+            <h5>Comment 8</h5>
+            <label for="comments">Comment 8</label>
+            <input type="text" id="cm_comment_8">
+            <label for="title">title</label>
+            <input type="text" id="cm_title_8">
+            <label for="name">Name</label>
+            <input type="text" id="cm_name_8">
+        </div>
+        <div>
+            <h5>Comment 9</h5>
+            <label for="comments">Comment 9</label>
+            <input type="text" id="cm_comment_9">
+            <label for="title">title</label>
+            <input type="text" id="cm_title_9">
+            <label for="name">Name</label>
+            <input type="text" id="cm_name_9">
+        </div>
+        <div>
+            <h5>Comment 10</h5>
+            <label for="comments">Comment 10</label>
+            <input type="text" id="cm_comment_10">
+            <label for="title">title</label>
+            <input type="text" id="cm_title_10">
+            <label for="name">Name</label>
+            <input type="text" id="cm_name_10">
+        </div>
+        <div>
+            <h5>Comment 11</h5>
+            <label for="comments">Comment 11</label>
+            <input type="text" id="cm_comment_11">
+            <label for="title">title</label>
+            <input type="text" id="cm_title_11">
+            <label for="name">Name</label>
+            <input type="text" id="cm_name_11">
+        </div>
+    </div>
+    <div>
+        <h4>Section 3 UP</h4>
+        <label for="Heading">Heading</label>
+        <input type="text" id="cm_heading_1">
+    </div>
+    <div>
+        <h4>Section 4 Service 1</h4>
+        <label for="title">Title Serivice 1</label>
+        <input type="text" id="sr_1_title">
+        <label for="description">Description</label>
+        <input type="text" id="sr_description_1">
+        <label for="button">button 1</label>
+        <input type="text" id="sr_button_1">
+        <label for="price">Price Service 1</label>
+        <input type="text" id="sr_pr_1">
+    </div>
+    <div>
+        <h4>Section 5 Service 2</h4>
+        <label for="title">Title Serivice 2</label>
+        <input type="text" id="sr_2_title">
+        <label for="description">Description</label>
+        <input type="text" id="sr_description_2">
+        <label for="button">button 2</label>
+        <input type="text" id="sr_button_2">
+        <label for="price">Price Service 2</label>
+        <input type="text" id="sr_pr_2">
+    </div>
+    <div>
+        <h4>Section 6 Service 3</h4>
+        <label for="title">Title Serivice 3</label>
+        <input type="text" id="sr_3_title">
+        <label for="description">Description</label>
+        <input type="text" id="sr_description_3">
+        
+        
+    </div>
+    <div>
+        <h4>Section 7 contact</h4>
+        <label for="title">Title Serivice 3</label>
+        <input type="text" id="cn_1_title">
+        <label for="description">Email</label>
+        <input type="text" id="cn_email_1">
+        
+        
+    </div>
+
+    <button onclick="updateDatapage8()">Update Data</button>
+</div>
+</div>
+    <script>
+        // Firebase configuration (replace with your own config)
+        var firebaseConfig = {
+            apiKey: "AIzaSyDk4Syexhxh2aG3gdMIJFM4exwdMfTDE3I",
+            authDomain: "promo-v3.firebaseapp.com",
+            databaseURL: "https://promo-v3-default-rtdb.firebaseio.com",
+            projectId: "promo-v3",
+            storageBucket: "promo-v3.appspot.com",
+            messagingSenderId: "304902424957",
+            appId: "1:304902424957:web:7b2a3d2bc495b99fb82414",
+            measurementId: "G-GH15ZS4W67"
+        };
+        
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var database = firebase.database();
+
+        // Function to update data from the admin page
+        function updateData() {
+            var availability_desktop = document.getElementById("availability_desktop").value;
+            var header_headline = document.getElementById("header_headline").value;
+            var header_intro = document.getElementById("header_intro").value;
+            var button_label_1 = document.getElementById("button_label_1").value;
+            var button_label_2 = document.getElementById("button_label_2").value;
+            var db_background = document.getElementById("db_background").value;
+            var publicDataRef = database.ref('publicDataDashboard');
+            publicDataRef.set({
+                value: availability_desktop,
+                header: header_headline,
+                header_intro : header_intro,
+                button_label_1: button_label_1,
+                button_label_2: button_label_2,
+                db_background: db_background
+            }, function(error) {
+                if (error) {
+                    console.error("Data could not be updated." + error);
+                } else {
+                    console.log("Data updated successfully.");
+                    // You can add a success message or further actions here if needed
+                }
+            });
+        }
+        
+        function updateDataPage1() {
+            var page_1_title = document.getElementById("page_1_title").value;
+            var role_1 = document.getElementById("role_1").value;
+            var role_2 = document.getElementById("role_2").value;
+            var role_3 = document.getElementById("role_3").value;
+            var page_1_description = document.getElementById("page_1_description").value;
+            var background_color = document.getElementById("background_color").value;
+            var publicDataRef = database.ref('publicDataPage1');
+            publicDataRef.set({
+                title: page_1_title,
+                role_1: role_1,
+                role_2 : role_2,
+                role_3: role_3,
+                page_1_description: page_1_description,
+                background_color: background_color
+
+            }, function(error) {
+                if (error) {
+                    console.error("Data could not be updated." + error);
+                } else {
+                    console.log("Data updated successfully.");
+                    // You can add a success message or further actions here if needed
+                    displayDataPage1();
+                }
+            });
+        }
+        
+        function updateDataPage2() {
+            var page_2_title = document.getElementById("page_2_title").value;
+            var page_2_role_1 = document.getElementById("page_2_role_1").value;
+            var page_2_role_2 = document.getElementById("page_2_role_2").value;
+            var page_2_description = document.getElementById("page_2_description").value;
+            var background_color_page_2 = document.getElementById("background_color_page_2").value;
+            var publicDataRef = database.ref('publicDataPage2');
+            publicDataRef.set({
+                title: page_2_title,
+                page_2_role_1: page_2_role_1,
+                page_2_role_2 : page_2_role_2,
+                page_2_description: page_2_description,
+                background_color_page_2: background_color_page_2
+
+            }, function(error) {
+                if (error) {
+                    console.error("Data could not be updated." + error);
+                } else {
+                    console.log("Data updated successfully.");
+                    // You can add a success message or further actions here if needed
+                    displayDataPage2();
+                }
+            });
+        }
+        
+        function displayData() {
+            var dataDisplay = document.getElementById("availability_desktop");
+            var dataHeader = document.getElementById("header_headline");
+            var dataHeader_intro = document.getElementById("header_intro");
+            var dataButton_1 = document.getElementById("button_label_1");
+            var dataButton_2 = document.getElementById("button_label_2");
+            var dataDbBackground = document.getElementById("db_background");
+            var publicDataRef = database.ref('publicDataDashboard');
+
+            
+publicDataRef.on('value', function(snapshot) {
+    var data = snapshot.val();
+
+    if (data) {
+        if (data.hasOwnProperty("value")) {
+            dataDisplay.value = data.value;
+        } else {
+            dataDisplay.value = "";
+        }
+
+        if (data.hasOwnProperty("header")) {
+            dataHeader.value = data.header;
+        } else {
+            dataHeader.value = "";
+        }
+
+        if (data.hasOwnProperty("header_intro")) {
+            dataHeader_intro.value = data.header_intro;
+        } else {
+            dataHeader_intro.value = "";
+        }
+
+        if (data.hasOwnProperty("button_label_1")) {
+            dataButton_1.value = data.button_label_1;
+        } else {
+            dataButton_1.value = "";
+        }
+
+        if (data.hasOwnProperty("button_label_2")) {
+            dataButton_2.value = data.button_label_2;
+        } else {
+            dataButton_2.value = "";
+        }
+
+        if (data.hasOwnProperty("db_background")) {
+            dataDbBackground.value = data.db_background;
+        } else {
+            dataDbBackground.value = "";
+        }
+
+    } else {
+        // Set default values if data doesn't exist
+        dataDisplay.value = "";
+        dataHeader.value = "";
+        dataHeader_intro.value = "";
+        dataButton_1.value = "";
+        dataButton_2.value = "";
+        
+    }
+
+    
+});
+        }
+        function displayDataPage1() {
+            var datapage_1_title = document.getElementById("page_1_title");
+            var datarole_1 = document.getElementById("role_1");
+            var datarole_2 = document.getElementById("role_2");
+            var datarole_3 = document.getElementById("role_3");
+            var datapage_1_description = document.getElementById("page_1_description");
+            var databackground_color = document.getElementById("background_color");
+            var publicDataRef = database.ref('publicDataPage1');
+            
+            publicDataRef.on('value', function(snapshot) {
+                var data = snapshot.val();
+                
+                if (data) {
+                    if (data.hasOwnProperty("title")) {
+                        datapage_1_title.value = data.title;
+                    } else {
+                        datapage_1_title.value = "";
+                    }
+          
+                    if (data.hasOwnProperty("role_1")) {
+                        datarole_1.value = data.role_1;
+                    } else {
+                        datarole_1.value = "";
+                    }
+                    if (data.hasOwnProperty("role_2")) {
+                        datarole_2.value = data.role_2;
+                    } else {
+                        datarole_2.value = "";
+                    }
+                    if (data.hasOwnProperty("role_3")) {
+                        datarole_3.value = data.role_3;
+                    } else {
+                        datarole_3.value = "";
+                    }
+                    if (data.hasOwnProperty("page_1_description")) {
+                        datapage_1_description.value = data.page_1_description;
+                    } else {
+                        datapage_1_description.value = "";
+                    }
+                    if (data.hasOwnProperty("background_color")) {
+                        databackground_color.value = data.background_color;
+                    } else {
+                        databackground_color.value = "";
+                    }
+                } 
+
+                console.log(datarole_2.value);
+             
+           
+            });
+        }
+        
+        //page2
+        function displayDataPage2() {
+            var datapage_2_title = document.getElementById("page_2_title");
+            var datarole_1 = document.getElementById("page_2_role_1");
+            var datarole_2 = document.getElementById("page_2_role_2");
+            var datapage_1_description = document.getElementById("page_2_description");
+            var databackground_color = document.getElementById("background_color_page_2");
+            var publicDataRef = database.ref('publicDataPage2');
+            
+            publicDataRef.on('value', function(snapshot) {
+                var data = snapshot.val();
+                
+                if (data) {
+                    if (data.hasOwnProperty("title")) {
+                        datapage_2_title.value = data.title;
+                    } else {
+                        datapage_2_title.value = "";
+                    }
+          
+                    if (data.hasOwnProperty("page_2_role_1")) {
+                        datarole_1.value = data.page_2_role_1;
+                    } else {
+                        datarole_1.value = "";
+                    }
+                    if (data.hasOwnProperty("page_2_role_1")) {
+                        datarole_2.value = data.page_2_role_2;
+                    } else {
+                        datarole_2.value = "";
+                    }
+                   
+                    if (data.hasOwnProperty("page_2_description")) {
+                        datapage_1_description.value = data.page_2_description;
+                    } else {
+                        datapage_1_description.value = "";
+                    }
+                    if (data.hasOwnProperty("background_color_page_2")) {
+                        databackground_color.value = data.background_color_page_2;
+                    } else {
+                        databackground_color.value = "";
+                    }
+                } 
+
+                console.log(datarole_2.value);
+             
+           
+            });
+        }
+        
+            
+        
+        // Call the displayData function to show data in text boxes on page load
+        displayData();
+        displayDataPage1();
+        displayDataPage2();
+        displayDataPage3();
+        displayDatapage4();
+        displayDatapage5();
+        displayDatapage6();
+        displayDatapage7();
+        displayDatapage8();
+    </script>
+</body>
+</html>

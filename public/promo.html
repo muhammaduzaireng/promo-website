@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auto Play Full Screen Video</title>
+    <style>
+        /* Hide the default controls */
+        video::-webkit-media-controls { display:none !important; }
+        video::-webkit-media-controls-enclosure { display:none !important; }
+        video::-webkit-media-slider-container { display:none !important; }
+        video::-webkit-media-slider { display:none !important; }
+        video::-webkit-media-volume-slider-container { display:none !important; }
+        video::-webkit-media-volume-slider { display:none !important; }
+
+        /* Make the video full screen */
+        video {
+            object-fit: fill;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <video id="autoplayVideo" muted autoplay>
+        <source src="./assets/614E0957-436E-4E49-A4D0-FEB6B32489D6.mov" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        // Trigger video play on page load
+        window.onload = function() {
+            var video = document.getElementById("autoplayVideo");
+            video.play();
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+function displayDatapage8() {
+    var data_title_1, data_description_1 ;  
+    //section 2
+    //comment 1
+    var data_cm_comment_1, data_cm_title_1, data_cm_name_1;
+    
+
+    //comment 2
+    var data_cm_comment_2, data_cm_title_2, data_cm_name_2; 
+
+
+    //comment 3
+    var data_cm_comment_3, data_cm_title_3, data_cm_name_3; 
+    //comment 4
+    var data_cm_comment_4, data_cm_title_4, data_cm_name_4;  
+    //comment 5
+    var data_cm_comment_5, data_cm_title_5, data_cm_name_5; 
+    //comment 6
+    var data_cm_comment_6, data_cm_title_6, data_cm_name_6;  
+    //comment 7
+    var data_cm_comment_7, data_cm_title_7, data_cm_name_7; 
+    //comment 8
+    var data_cm_comment_8, data_cm_title_8, data_cm_name_8;
+    //comment 9
+    var data_cm_comment_9, data_cm_title_9, data_cm_name_9;
+    //comment 10
+    var data_cm_comment_10, data_cm_title_10, data_cm_name_10
+    //comment 11
+    var data_cm_comment_11, data_cm_title_11, data_cm_name_11;
+    //section 3
+
+    var data_cm_heading_1;
+
+    //section 4
+    var data_sr_1_title, data_sr_description_1, data_sr_button_1, data_sr_pr_1;
+    //section 5
+    var data_sr_2_title, data_sr_description_2, data_sr_button_2, data_sr_pr_2;
+    //section 6
+    var data_sr_3_title, data_sr_description_3;
+    //section 7
+    
+    var data_cn_1_title, data_cn_email_1;
+
+    var publicDataRef = database.ref('publicDatapage8');
+    
+    publicDataRef.on('value', function(snapshot) {
+        var data = snapshot.val();
+
+        if (data) {
+            // Section 1
+            
+            data_title_1 = data.title_1 || "";
+            
+            //data_title_1 = data.title_1 || "";
+            data_description_1 = data.description_1 || "";
+            
+            // Section 2 - Comment 1
+            data_cm_comment_1 = data.cm_comment_1 || "";
+            
+            data_cm_title_1 = data.cm_title_1 || "";
+            data_cm_name_1 = data.cm_name_1 || "";
+
+             // Section 2 - Comment 2
+             data_cm_comment_2 = data.cm_comment_2 || "";
+             data_cm_title_2 = data.cm_title_2 || "";
+             data_cm_name_2 = data.cm_name_2 || "";
+              // Section 2 - Comment 3
+            data_cm_comment_3 = data.cm_comment_3 || "";
+            data_cm_title_3 = data.cm_title_3 || "";
+            data_cm_name_3 = data.cm_name_3 || "";
+             // Section 2 - Comment 4
+             data_cm_comment_4 = data.cm_comment_4 || "";
+             data_cm_title_4 = data.cm_title_4 || "";
+             data_cm_name_4 = data.cm_name_4 || "";
+              // Section 2 - Comment 5
+            data_cm_comment_5 = data.cm_comment_5 || "";
+            data_cm_title_5 = data.cm_title_5 || "";
+            data_cm_name_5 = data.cm_name_5 || "";
+             // Section 2 - Comment 6
+             data_cm_comment_6 = data.cm_comment_6 || "";
+             data_cm_title_6 = data.cm_title_6 || "";
+             data_cm_name_6 = data.cm_name_6 || "";
+              // Section 2 - Comment 7
+            data_cm_comment_7 = data.cm_comment_7 || "";
+            data_cm_title_7 = data.cm_title_7 || "";
+            data_cm_name_7 = data.cm_name_7 || "";
+             // Section 2 - Comment 8
+             data_cm_comment_8 = data.cm_comment_8 || "";
+             data_cm_title_8 = data.cm_title_8 || "";
+             data_cm_name_8 = data.cm_name_8 || "";
+              // Section 2 - Comment 9
+            data_cm_comment_9 = data.cm_comment_9 || "";
+            data_cm_title_9 = data.cm_title_9 || "";
+            data_cm_name_9 = data.cm_name_9 || "";
+             // Section 2 - Comment 10
+             data_cm_comment_10 = data.cm_comment_10 || "";
+             data_cm_title_10 = data.cm_title_10 || "";
+             data_cm_name_10 = data.cm_name_10 || "";
+              // Section 2 - Comment 11
+            data_cm_comment_11 = data.cm_comment_11|| "";
+            data_cm_title_11 = data.cm_title_11|| "";
+            data_cm_name_11 = data.cm_name_11|| "";
+
+
+            // Continue similar assignments for Section 2 - Comment 2 to Comment 11
+
+            // Section 3
+            data_cm_heading_1 = data.cm_heading_1 || "";
+
+            // Section 4
+            data_sr_1_title = data.sr_1_title || "";
+            data_sr_description_1 = data.sr_description_1 || "";
+            data_sr_button_1 = data.sr_button_1 || "";
+            data_sr_pr_1 = data.sr_pr_1 || "";
+            // Section 5
+            data_sr_2_title = data.sr_2_title || "";
+            data_sr_description_2 = data.sr_description_2 || "";
+            data_sr_button_2 = data.sr_button_2 || "";
+            data_sr_pr_2 = data.sr_pr_2 || "";
+            // Section 6
+            data_sr_3_title = data.sr_3_title || "";
+            data_sr_description_3 = data.sr_description_3 || "";
+            //section 7
+            data_cn_1_title = data.data_cn_1_title || "";
+            data_cn_email_1 = data.data_cn_email_1 || "";            
+
+            
+            
+        } else {
+            // Handle the case when no data is found
+            console.log("No data found in Firebase.");
+        }
+        document.getElementById("title_1").innerHTML = data_title_1;
+        document.getElementById("description_1").innerHTML = data_description_1;
+        console.log(data_cm_comment_1);
+        document.getElementById("cm_comment_1").innerHTML = data_cm_comment_1;
+        
+    });
+}
